@@ -1,12 +1,14 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../authProvider/AuthProvider';
+import { updateProfile } from 'firebase/auth';
 
 const Registration = () => {
     const [passwordError, setPasswordError] = useState("");
     const [password, setPassword] = useState();
     const [success, setSucess] = useState("")
     const { registrationUser } = useContext(AuthContext);
+    const navigate=useNavigate()
 
     // registration value recive 
     const handleUserRegistration = (event) => {
@@ -23,6 +25,18 @@ const Registration = () => {
         else {
             registrationUser(email, password)
                 .then(result => {
+                    const loginUser = result.user;
+                    
+                    updateProfile(result.user, {
+                        displayName: name,
+                        photoURL: photo_url
+                    })
+                        .then(result => {
+                            navigate("/login")
+                        }).catch(error => {
+                          
+                        })
+
                     setSucess("Registration Seccessful")
                 }).catch(error => {
                     setSucess("Registration Faild");
@@ -86,10 +100,10 @@ const Registration = () => {
                                 <button className="btn btn-primary">Registration</button>
                             </div>
                             {
-                                success && 
+                                success &&
                                 <div className="form-control mt-6">
-                                <p className="text-2xl text-green-500">{success}</p>
-                            </div>
+                                    <p className="text-2xl text-green-500">{success}</p>
+                                </div>
                             }
                             <div>
                                 <p className='text-red-500'>You have an account? <Link to="/login"><button className="btn btn-link">Login </button></Link> </p>

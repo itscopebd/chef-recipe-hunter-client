@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../authProvider/AuthProvider';
 
 const Header = () => {
+    const { user } = useContext(AuthContext);
+    // const {displayName,photoURL}=user;
+    // console.log(displayName)
     return (
         <div className='bg-neutral-900 text-white'>
             <div className='container mx-auto'>
@@ -17,7 +21,7 @@ const Header = () => {
                                 <li><a>Blog</a></li>
                             </ul>
                         </div>
-                        <a className="btn btn-ghost normal-case text-xl custom__animation">The Food Zoon</a>
+                        <a className="btn btn-ghost normal-case text-xl custom__animation">FoodZoon</a>
                     </div>
                     <div className="navbar-center hidden lg:flex">
                         <ul className="menu menu-horizontal px-1 bg-neutral-900">
@@ -28,13 +32,19 @@ const Header = () => {
                     </div>
                     <div className="navbar-end">
 
-                        <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                            <div className="w-10 rounded-full">
-                                <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-                            </div>
-                        </label>
 
-                        <Link to="/login" className="btn btn-warning text-white">LogIn</Link>
+                        {
+                            user &&  user ? <><label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                                <div className="w-10 rounded-full" title={user?.displayName}>
+                                    
+                                    <img src={user?.photoURL} />
+                                </div>
+                            </label></> :
+                            <><Link to="/login" className="btn btn-warning text-white">LogIn</Link></>
+}
+
+
+                        
                     </div>
                 </div>
             </div>
