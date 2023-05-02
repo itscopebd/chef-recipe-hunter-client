@@ -2,11 +2,11 @@ import React from 'react';
 import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 const Footer = () => {
     return (
-        <div className='bg-neutral-500 text-white py-5'>
+        <div className='bg-neutral-900 text-white py-5'>
             <div className='container mx-auto'>
                 <div className='flex justify-between'>
                     <div>
-                        <a className="btn btn-ghost normal-case text-xl bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%">The Food Zoon</a>
+                        <a className="btn btn-ghost normal-case text-xl custom__animation">The Food Zoon</a>
                         
                            <p className='py-3 text-2xl font-bold'>Address:</p>
                            <p>Bonani Golshan 211A.</p>
