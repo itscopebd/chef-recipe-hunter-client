@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const LogIn = () => {
     return (
-        <div>
+        
             <div className="hero min-h-screen bg-base-200">
                 <div className="w-96">
                     
@@ -33,13 +33,13 @@ const LogIn = () => {
                                 <button className="btn btn-secondary ms-2"> <FaGithub className='text-3xl mr-2'></FaGithub> Github</button>
                             </div>
                             <div>
-                                <p className='text-red-500'>Don't have en account? <Link to="/registration "><button className="btn btn-link">Registration </button></Link> </p>
+                                <p className='text-red-500'>Don't have an account? <Link to="/registration "><button className="btn btn-link">Registration </button></Link> </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+      
     );
 };
 
