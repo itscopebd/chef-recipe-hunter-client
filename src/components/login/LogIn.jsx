@@ -2,16 +2,28 @@ import React, { useContext } from 'react';
 import { FaGithub, FaGoogle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../authProvider/AuthProvider';
-import { GoogleAuthProvider } from 'firebase/auth';
+import { GoogleAuthProvider, GithubAuthProvider } from 'firebase/auth';
 
 const LogIn = () => {
-    const { user,loginWithGoogle } = useContext(AuthContext)
+    const { user, loginWithGoogle, loginWithGithub } = useContext(AuthContext)
 
-   console.log(user)
-
+    console.log(user)
+    // login google 
     const handleLoginWithGoogle = () => {
         const googleProvider = new GoogleAuthProvider();
         loginWithGoogle(googleProvider)
+            .then(result => {
+                console.log(result.user)
+            }).catch(error => {
+                console.log(error)
+            })
+    }
+
+
+    // login with github 
+    const handleLoginWithGithub = () => {
+        const githubProvider = new GithubAuthProvider();
+        loginWithGithub(githubProvider)
             .then(result => {
                 console.log(result.user)
             }).catch(error => {
@@ -46,7 +58,7 @@ const LogIn = () => {
                         </div>
                         <div className="mt-6 text-center">
                             <button className="btn btn-secondary mr-2" onClick={handleLoginWithGoogle}>  <FaGoogle className='text-3xl mr-2'></FaGoogle> Google </button>
-                            <button className="btn btn-secondary ms-2"> <FaGithub className='text-3xl mr-2'></FaGithub> Github</button>
+                            <button className="btn btn-secondary ms-2" onClick={handleLoginWithGithub}> <FaGithub className='text-3xl mr-2'></FaGithub> Github</button>
                         </div>
                         <div>
                             <p className='text-red-500'>Don't have an account? <Link to="/registration "><button className="btn btn-link">Registration </button></Link> </p>
