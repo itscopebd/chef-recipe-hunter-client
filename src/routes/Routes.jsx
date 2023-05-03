@@ -6,6 +6,7 @@ import HomePage from "../pages/HomePage";
 import Registration from "../components/registration/Registration";
 import DetailsPages from "../pages/DetailsPages";
 import ErrorPage from "../pages/ErrorPage";
+import BlogPage from "../pages/BlogPage";
 
 const route=createBrowserRouter([
     {
@@ -31,6 +32,10 @@ const route=createBrowserRouter([
                 path:"/details/:id",
                 element:<DetailsPages title="Details"></DetailsPages>,
                 loader:({params})=> fetch(`http://localhost:5000/alldata/${params.id}`)
+            },
+            {
+                path:"/blog",
+                element:<BlogPage></BlogPage>
             }
         ]
     }
