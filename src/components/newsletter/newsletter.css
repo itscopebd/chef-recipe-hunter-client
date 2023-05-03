@@ -1,0 +1,45 @@
+.subscribe-wrapper {
+    background-image: url("https://i.ibb.co/G7fGMq5/ad-ban-bg.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    background-size: cover;
+}
+
+.subscribe {
+    padding: 100px 0;
+    background: #0000007d;
+    position: relative;
+}
+/* .subscribe::before {
+    content: "";
+    clip-path: polygon(0% 0%, 100% 0%, 76% 100%, 0% 100%);
+    background: #FBB217e3;
+    height: 100%;
+    display: block;
+    width: 60%;
+    position: absolute;
+    top: 0;
+} */
+
+.subs-title {
+    color: #fff;
+    font-size: 30px;
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+.subs-des {
+    color: #fff;
+    font-size: 15px;
+}
+
+input.input.input-bordered {
+    width: 80%;
+}
+button.btn.btn-square.bg-warning {
+    width: 20%;
+    border-color: #FBBD23;
+    color: #333;
+}
+button.btn.btn-square.bg-warning:hover {
+    background: #e9aa0f;
+}
