@@ -6,7 +6,7 @@ const Footer = () => {
             <div className='container mx-auto'>
                 <div className='flex justify-between'>
                     <div>
-                        <a className="btn btn-ghost normal-case text-xl custom__animation">The Food Zoon</a>
+                        <a className="btn btn-ghost normal-case text-xl custom__animation">FoodZoon</a>
                         
                            <p className='py-3 text-2xl font-bold'>Address:</p>
                            <p>Bonani Golshan 211A.</p>
