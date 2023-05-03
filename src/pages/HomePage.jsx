@@ -2,6 +2,7 @@ import React from 'react';
 import Banner from '../components/banner/Banner';
 import LoadData from '../loadApiData/LoadData';
 import Newsletter from '../components/newsletter/Newsletter';
+import Gallery from '../components/gallery/Gallery';
 
 const HomePage = () => {
     
@@ -12,6 +13,7 @@ const HomePage = () => {
                 <LoadData></LoadData>
             </div>
             <Newsletter></Newsletter>
+            <Gallery></Gallery>
         </>
     );
 };
