@@ -4,6 +4,7 @@ import Main from "../layout/Main";
 import LogIn from "../components/login/LogIn";
 import HomePage from "../pages/HomePage";
 import Registration from "../components/registration/Registration";
+import DetailsPages from "../pages/DetailsPages";
 
 const route=createBrowserRouter([
     {
@@ -23,6 +24,11 @@ const route=createBrowserRouter([
             {
                 path:"/registration",
                 element:<Registration></Registration>
+            },
+            {
+                path:"/details/:id",
+                element:<DetailsPages title="Details"></DetailsPages>,
+                loader:({params})=> fetch(`http://localhost:5000/alldata/${params.id}`)
             }
         ]
     }

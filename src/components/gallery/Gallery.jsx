@@ -2,7 +2,7 @@ import React from 'react';
 
 const Gallery = () => {
     return (
-        <div className='py-20'>
+        <div className='mt-10 mb-20'>
         <h3 className='text-3xl text-center pb-10 custom__animation'> Images Gallery</h3>
             <div className='grid md:grid-cols-2 lg:grid-cols-4'>
                 <div className='overflow-hidden cursor-pointer duration-75'>

@@ -3,7 +3,7 @@ import "./newsletter.css"
 const Newsletter = () => {
     return (
 
-        <div className='subscribe-wrapper'>
+        <div className='subscribe-wrapper my-20'>
             <div className='subscribe'>
 
                 <div className='container flex mx-auto flex-col md:flex-row md:px-0 px-1'>
