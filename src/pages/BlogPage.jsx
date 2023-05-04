@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Pdf from "react-to-pdf";
 const BlogPage = () => {
     return (
         <div className='container mx-auto py-20'>

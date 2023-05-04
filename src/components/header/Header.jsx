@@ -1,9 +1,20 @@
 import React, { useContext } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../authProvider/AuthProvider';
 
 const Header = () => {
-    const { user } = useContext(AuthContext);
+    const { user,userLogOut } = useContext(AuthContext);
+const navigate=useNavigate()
+   const handleLogOut=()=>{
+    userLogOut()
+    .then(result=>{
+        navigate("/login")
+    }).catch(error=>{
+
+    })
+   }
+
+
     // const {displayName,photoURL}=user;
     // console.log(displayName)
     return (
@@ -36,11 +47,17 @@ const Header = () => {
 
                         {
                             user &&  user ? <><label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                                <div className="w-10 rounded-full" title={user?.displayName}>
+                               
+                               <div className="w-10 rounded-full" title={user?.displayName}>
                                     
                                     <img src={user?.photoURL} />
+                                    
                                 </div>
-                            </label></> :
+                               
+                               
+
+                               
+                            </label> <button className="btn btn-warning text-white" onClick={handleLogOut}>Log Out</button></> :
                             <><Link to="/login" className="btn btn-warning text-white">LogIn</Link></>
 }
 

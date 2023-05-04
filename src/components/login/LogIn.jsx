@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { FaGithub, FaGoogle } from 'react-icons/fa';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../authProvider/AuthProvider';
 import { GoogleAuthProvider, GithubAuthProvider } from 'firebase/auth';
 
@@ -11,7 +11,9 @@ const LogIn = () => {
 
     const { user, loginWithGoogle, loginWithGithub, logInwithEmailPassword } = useContext(AuthContext)
     const navigate = useNavigate();
-
+    const location = useLocation();
+    console.log(location)
+    const from=location.state?.form?.pathname || "/"
     // login google 
     const handleLoginWithGoogle = () => {
 
@@ -46,7 +48,7 @@ const LogIn = () => {
         logInwithEmailPassword(email, password)
             .then(result => {
                 setError("")
-                navigate("/")
+                navigate(from,{replace:true})
             }).catch(error => {
                 setSucess("")
                 setError("Email or Password Not Match!!")

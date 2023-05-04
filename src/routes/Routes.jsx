@@ -1,12 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../layout/Main";
-
 import LogIn from "../components/login/LogIn";
 import HomePage from "../pages/HomePage";
 import Registration from "../components/registration/Registration";
-import DetailsPages from "../pages/DetailsPages";
 import ErrorPage from "../pages/ErrorPage";
 import BlogPage from "../pages/BlogPage";
+import ChefRecipePage from "../pages/ChefRecipePage";
+import PrivateRouter from "./PrivateRouter";
 
 const route=createBrowserRouter([
     {
@@ -30,7 +30,7 @@ const route=createBrowserRouter([
             },
             {
                 path:"/details/:id",
-                element:<DetailsPages title="Details"></DetailsPages>,
+                element:<PrivateRouter><ChefRecipePage title="Details"></ChefRecipePage></PrivateRouter>,
                 loader:({params})=> fetch(`http://localhost:5000/alldata/${params.id}`)
             },
             {
