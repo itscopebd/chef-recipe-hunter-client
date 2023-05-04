@@ -59,6 +59,7 @@ const userLogOut=()=>{
         logInwithEmailPassword,
         updateUser,
         loading,
+        setLoading,
         userLogOut
     }
 

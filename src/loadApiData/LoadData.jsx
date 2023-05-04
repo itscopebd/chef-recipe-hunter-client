@@ -4,6 +4,7 @@ import Card from '../components/card/Card';
 
 const LoadData = () => {
     const data=useLoaderData();
+
     
     return (
         <>
