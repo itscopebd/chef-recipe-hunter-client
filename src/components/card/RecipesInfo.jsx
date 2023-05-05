@@ -50,25 +50,6 @@ const RecipesInfo = ({ recipesInfo }) => {
                 </div>
             </div>
 
-
-
-            {/* <div className="card card-side bg-base-100 shadow-xl md:p-20 flex-col md:flex-row m-5 md:m-0">
-                <LazyLoad><figure><img className='h-full' src={chefPicture} alt="" /></figure></LazyLoad>
-                <div className="card-body">
-                    <h2 className="card-title">{chefName}</h2>
-                    <p className='flex-grow-0'> <strong>shortBio:</strong> {shortBio}</p>
-                    <p className='py-0 my-0 flex-grow-0'> <strong>likes:</strong> <span className="badge bg-orange-500 hover:bg-purple-500 border-0">{likes}</span>
-                    </p>
-                    <p className='py-0 my-0 flex-grow-0'> <strong>Recipes: </strong> <span className="badge bg-orange-500 hover:bg-purple-500 border-0">{numberOfRecipes}</span>
-                    </p>
-                    <p> <strong>Experience:</strong> {yearsOfExperience} years</p>
-
-                </div>
-            </div> */}
-
-
-
-
         </div>
     );
 };

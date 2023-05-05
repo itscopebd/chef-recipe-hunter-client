@@ -10,7 +10,7 @@ const Details = ({ details, title }) => {
 
 
     useEffect(() => {
-        fetch("http://localhost:5000/recipesinfo")
+        fetch("https://foodzoon.vercel.app/recipesinfo")
             .then(res => res.json())
             .then(data => {
                 const filterData = data.filter(matchData => matchData.recipeInfo_id == id);
