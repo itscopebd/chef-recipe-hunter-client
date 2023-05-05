@@ -32,14 +32,14 @@
     font-size: 15px;
 }
 
-input.input.input-bordered {
+.subscribe-wrapper input.input.input-bordered {
     width: 80%;
 }
-button.btn.btn-square.bg-warning {
+.subscribe-wrapper button.btn.btn-square.bg-warning {
     width: 20%;
     border-color: #FBBD23;
     color: #333;
 }
-button.btn.btn-square.bg-warning:hover {
+.subscribe-wrapper button.btn.btn-square.bg-warning:hover {
     background: #e9aa0f;
 }

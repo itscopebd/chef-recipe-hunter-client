@@ -19,7 +19,7 @@ const Card = ({ chefDetails }) => {
                     <div className='flex justify-between items-center gap-10'>
                     <p className='font-bold'>Likes: {likes}</p>
                        
-                        <Link to={`/details/${id}`}><button className="btn btn-warning">View Recipes</button></Link>
+                        <Link to={`/details/${id}`}><button className="btn bg-orange-500 hover:bg-purple-500 border-0">View Recipes</button></Link>
                         
                     </div>
                 </div>

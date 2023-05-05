@@ -13,7 +13,7 @@ const Banner = () => {
                         <div className='md:w-6/12 text-white'>
                             <h1 className="text-5xl font-bold">The perfect dish with the super perfect taste.!</h1>
                             <p className="py-6">Delicious meals are tasty, appetizing, scrumptious, yummy, luscious, delectable, mouth-watering, fit for a king, delightful, lovely, wonderful, pleasant, enjoyable, appealing, enchanting, charming.</p>
-                            <button className="btn btn-warning">Shop Now</button>
+                            <button className="btn bg-orange-500 hover:bg-purple-500 border-0">Learn More</button>
                         </div>
                     </div>
                 </div>

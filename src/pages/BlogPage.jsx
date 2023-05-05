@@ -1,10 +1,10 @@
 import React from 'react';
-
+import Pdf from "react-to-pdf"
 const BlogPage = () => {
 
     return (
-        <div className='container mx-auto py-20'>
-
+        <div className='container mx-auto py-20 md:px-0 px-10'>
+<p className='text-center'> <button className='btn'>Download</button> </p>
            <h3 className='text-2xl font-bold pb-2'>Controlled </h3> 
            <p>controlled components refer to components that have their state and behavior controlled by the parent component. These components rely on props passed down from the parent component to update their state and behavior.</p>
 

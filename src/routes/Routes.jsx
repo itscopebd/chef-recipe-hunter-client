@@ -17,7 +17,7 @@ const route=createBrowserRouter([
             {
                 path:"/",
                 element:<HomePage></HomePage>,
-                loader:()=>fetch("https://foodzoon-itscopebd.vercel.app/alldata")
+                loader:()=>fetch("http://localhost:5000/alldata")
             },
             {
                 path:"/login",
@@ -31,7 +31,7 @@ const route=createBrowserRouter([
             {
                 path:"/details/:id",
                 element:<PrivateRouter><ChefRecipePage title="Details"></ChefRecipePage></PrivateRouter>,
-                loader:({params})=> fetch(`https://foodzoon-itscopebd.vercel.app/alldata/${params.id}`)
+                loader:({params})=> fetch(`http://localhost:5000/alldata/${params.id}`)
             },
             {
                 path:"/blog",

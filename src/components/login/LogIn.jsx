@@ -20,7 +20,9 @@ const LogIn = () => {
         const googleProvider = new GoogleAuthProvider();
         loginWithGoogle(googleProvider)
             .then(result => {
-                console.log(result.user)
+
+                navigate(from,{replace:true})
+                // console.log(result.user)
             }).catch(error => {
                 console.log(error)
             })
@@ -32,7 +34,7 @@ const LogIn = () => {
         const githubProvider = new GithubAuthProvider();
         loginWithGithub(githubProvider)
             .then(result => {
-                console.log(result.user)
+                navigate(from,{replace:true})
             }).catch(error => {
                 console.log(error)
             })
